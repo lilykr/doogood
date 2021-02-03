@@ -1,24 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import CharityList from './pages/CharityList';
+import Map from './pages/Map';
+import EventDescription from './pages/EventDescription'
+import CharityDescription from './pages/CharityDescription';
+import NavBar from './components/NavBar';
+import Contacts from './pages/Contacts';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/">
+              <Map />
+            </Route>
+
+            <Route path="/associations">
+              <CharityList />
+            </Route>
+
+            <Route path="/description/evenement/:id">
+              <EventDescription />
+            </Route>
+
+            <Route path="/description/association/:id">
+              <CharityDescription />
+            </Route>
+
+            <Route path="/contacts">
+              <Contacts />
+            </Route>
+
+          </Switch>
+
+          <NavBar />
+
+        </div>
+      </Router>
+    </ChakraProvider>
   );
 }
 
