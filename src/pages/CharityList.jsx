@@ -1,8 +1,10 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react"
+
 
 function CharityList () {
     return (
-        <div>Liste des assoss</div>
+        <Box height="90vh">Liste des assoss </Box>
     )
 }
 

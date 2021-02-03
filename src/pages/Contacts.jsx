@@ -1,9 +1,11 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react"
+
 
 function Contacts () {
 
     return (
-        <div>Nous contacter</div>
+        <Box height="90vh">Nous contacter</Box>
     )
 
 }

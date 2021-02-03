@@ -1,9 +1,11 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react"
+
 
 function EventDescription () {
 
     return (
-        <div>evenement</div>
+        <Box height="90vh">evenement</Box>
     )
 
 }

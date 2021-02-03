@@ -2,8 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import CharityList from './pages/CharityList';
@@ -12,7 +11,6 @@ import EventDescription from './pages/EventDescription'
 import CharityDescription from './pages/CharityDescription';
 import NavBar from './components/NavBar';
 import Contacts from './pages/Contacts';
-
 
 function App() {
   return (

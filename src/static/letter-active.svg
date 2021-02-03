@@ -1,0 +1,35 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    version="1.1"
+    x="0px"
+    y="0px"
+    viewBox="0 0 100 125">
+    <g transform="translate(0,-952.36218)">
+        <path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;"
+            d="m 10,972.36216 c -2.1642,0 -4,1.83585 -4,4 l 0,52.00004 c 0,2.1641 1.8358,4 4,4 l 80,0 c 2.1642,0 4,-1.8359 4,-4 l 0,-52.00004 c 0,-2.16415 -1.8358,-4 -4,-4 l -80,0 z m 6.5938,6 66.8124,0 L 50,1009.2684 16.5938,978.36216 z M 12,982.26841 32.656199,1001.3622 12,1022.0184 12,982.26841 z m 76,0 0,39.74999 L 67.3438,1001.3622 88,982.26841 z m -50.9375,23.18749 10.9063,10.0938 a 3.0003,3.0003 0 0 0 4.0624,0 l 10.9063,-10.0938 20.9063,20.9063 -67.687601,0 20.906301,-20.9063 z"
+            fill="#288F81"
+            fill-opacity="1"
+            stroke="none"
+            marker="none"
+            visibility="visible"
+            display="inline"
+            overflow="visible"/>
+    </g>
+    <text x="0"
+        y="115"
+        fill="#000000"
+        font-size="5px"
+        font-weight="bold"
+        font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text>
+    <text x="0"
+        y="120"
+        fill="#000000"
+        font-size="5px"
+        font-weight="bold"
+        font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text>
+</svg>

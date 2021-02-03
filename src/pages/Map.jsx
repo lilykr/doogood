@@ -1,9 +1,11 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react"
+
 
 function Map () {
 
     return (
-        <div>carte</div>
+        <Box height="90vh">carte</Box>
     )
 
 }

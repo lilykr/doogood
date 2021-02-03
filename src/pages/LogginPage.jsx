@@ -1,9 +1,11 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react"
+
 
 function LogginPage () {
 
     return (
-        <div>Se connecter</div>
+        <Box height="90vh">Se connecter</Box>
     )
 
 }
