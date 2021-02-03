@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Phone from '../static/phone.svg';
 import Letter from '../static/letter.svg'
@@ -8,6 +8,7 @@ import LetterActive from '../static/letter-active.svg'
 import MapActive from '../static/map-active.svg';
 import { Flex } from "@chakra-ui/react";
 import ImgNavBar from './ImgNavBar'
+
 
 function NavBar() {
     const [isMapActive, setMapIsActive] = useState(false)
