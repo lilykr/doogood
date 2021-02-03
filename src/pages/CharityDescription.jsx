@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react"
 function CharityDescription () {
 
     return (
-        <Box height="90vh">description de l'assoss</Box>
+        <Box>description de l'assoss</Box>
     )
 
 }

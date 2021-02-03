@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react"
 function EventDescription () {
 
     return (
-        <Box height="90vh">evenement</Box>
+        <Box>evenement</Box>
     )
 
 }

@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import CharityList from './pages/CharityList';
 import Map from './pages/Map';
 import EventDescription from './pages/EventDescription'
@@ -18,25 +18,27 @@ function App() {
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/">
-              <Map />
-            </Route>
+            <Box height="87vh">
+              <Route exact path="/">
+                <Map />
+              </Route>
 
-            <Route path="/associations">
-              <CharityList />
-            </Route>
+              <Route path="/associations">
+                <CharityList />
+              </Route>
 
-            <Route path="/description/evenement/:id">
-              <EventDescription />
-            </Route>
+              <Route path="/description/evenement/:id">
+                <EventDescription />
+              </Route>
 
-            <Route path="/description/association/:id">
-              <CharityDescription />
-            </Route>
+              <Route path="/description/association/:id">
+                <CharityDescription />
+              </Route>
 
-            <Route path="/contacts">
-              <Contacts />
-            </Route>
+              <Route path="/contacts">
+                <Contacts />
+              </Route>
+            </Box>
 
           </Switch>
 

@@ -17,7 +17,7 @@ function CharityList() {
     }, [])
 
     return (
-        <Box height="90vh">
+        <Box>
             <Box display="flex" flexWrap="wrap" padding="4%" marginTop="10%"
                 justifyContent="space-around">
                 <FilterButton text={"Personnes âgées"} />
@@ -27,11 +27,12 @@ function CharityList() {
                 <FilterButton text={"Éducation"} />
             </Box>
 
-            {charities.map(charity => (
-                <div key={charity.id}>
-                    <CharityCard charity={charity} />
-                </div>
-            ))
+            {charities.filter((value, index, self) => index === self.findIndex((t) =>
+                t.charity_id === value.charity_id)).map(charity => (
+                    <div key={charity.id}>
+                        <CharityCard charity={charity} />
+                    </div>
+                ))
             }
 
         </Box>

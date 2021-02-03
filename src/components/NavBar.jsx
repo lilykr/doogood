@@ -32,7 +32,8 @@ function NavBar() {
     }
 
     return (
-        <Flex paddingTop="5%" marginBottom="3%" borderTop="1px" borderColor="#C4C4C4" justifyContent="center">
+        <Flex paddingTop="5%" marginBottom="3%" borderTop="1px"
+         borderColor="#C4C4C4" justifyContent="center" backgroundColor="white" position="fixed">
             <Link to="/">
                 <ImgNavBar
                  isActive={isMapActive} 

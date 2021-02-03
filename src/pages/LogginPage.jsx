@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react"
 function LogginPage () {
 
     return (
-        <Box height="90vh">Se connecter</Box>
+        <Box>Se connecter</Box>
     )
 
 }
