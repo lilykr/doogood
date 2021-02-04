@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import FilterButton from '../components/FilterButton';
 import services from '../services';
 import CharityCard from '../components/CharityCard'
+import { Link } from 'react-router-dom';
 
 
 function CharityList() {
@@ -31,7 +32,7 @@ function CharityList() {
         <Box>
             <Box display="flex" flexWrap="wrap" padding="4%" marginTop="10%"
                 justifyContent="space-around">
-                <FilterButton text={"Personnes âgées"} filterCharities={filterCharities} isActive={isActive}/>
+                <FilterButton text={"Personnes âgées"} filterCharities={filterCharities} isActive={isActive} />
                 <FilterButton text={"Handicap"} filterCharities={filterCharities} isActive={isActive} />
                 <FilterButton text={"Enfants"} filterCharities={filterCharities} isActive={isActive} />
                 <FilterButton text={"Sans abris"} filterCharities={filterCharities} isActive={isActive} />
@@ -44,7 +45,9 @@ function CharityList() {
                 filteredCharities.filter((value, index, self) => index === self.findIndex((t) =>
                     t.charity_id === value.charity_id)).map((charity, i) => (
                         <div key={i} >
-                            <CharityCard charity={charity} />
+                            <Link to={`/association/${charity.charity_id}/description`}>
+                                <CharityCard charity={charity} />
+                            </Link>
                         </div>
                     ))
             }

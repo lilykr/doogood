@@ -28,11 +28,11 @@ function App() {
                   <CharityList />
                 </Route>
 
-                <Route path="/description/evenement/:id">
+                <Route path="association/:id/evenement/:id">
                   <EventDescription />
                 </Route>
 
-                <Route path="/description/association/:id">
+                <Route path="/association/:id/description">
                   <CharityDescription />
                 </Route>
 
