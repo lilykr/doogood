@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Phone from '../static/phone.svg';
 import Letter from '../static/letter.svg'
 import Map from '../static/map.svg';
@@ -11,6 +11,10 @@ import ImgNavBar from './ImgNavBar'
 
 
 function NavBar() {
+
+    let {pathname} = useLocation()
+    console.log(pathname)
+
     const [isMapActive, setMapIsActive] = useState(false)
     const [isPhoneActive, setPhoneIsActive] = useState(false)
     const [isLetterActive, setLetterIsActive] = useState(false)
@@ -29,7 +33,7 @@ function NavBar() {
         setLetterIsActive(!isLetterActive)
         setPhoneIsActive(false)
         setMapIsActive(false)
-    }
+    // }
 
     return (
         <Flex paddingTop="5%" marginBottom="3%" borderTop="1px"

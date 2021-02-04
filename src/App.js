@@ -11,41 +11,42 @@ import EventDescription from './pages/EventDescription'
 import CharityDescription from './pages/CharityDescription';
 import NavBar from './components/NavBar';
 import Contacts from './pages/Contacts';
+import "focus-visible/dist/focus-visible"
 
 function App() {
   return (
     <ChakraProvider>
-      <Router>
-        <div className="App">
-          <Switch>
-            <Box height="87vh">
-              <Route exact path="/">
-                <Map />
-              </Route>
+        <Router>
+          <div className="App">
+            <Switch>
+              <Box height="87vh">
+                <Route exact path="/">
+                  <Map />
+                </Route>
 
-              <Route path="/associations">
-                <CharityList />
-              </Route>
+                <Route path="/associations">
+                  <CharityList />
+                </Route>
 
-              <Route path="/description/evenement/:id">
-                <EventDescription />
-              </Route>
+                <Route path="/description/evenement/:id">
+                  <EventDescription />
+                </Route>
 
-              <Route path="/description/association/:id">
-                <CharityDescription />
-              </Route>
+                <Route path="/description/association/:id">
+                  <CharityDescription />
+                </Route>
 
-              <Route path="/contacts">
-                <Contacts />
-              </Route>
-            </Box>
+                <Route path="/contacts">
+                  <Contacts />
+                </Route>
+              </Box>
 
-          </Switch>
+            </Switch>
 
-          <NavBar />
+            <NavBar />
 
-        </div>
-      </Router>
+          </div>
+        </Router>
     </ChakraProvider>
   );
 }
