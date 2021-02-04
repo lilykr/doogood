@@ -8,7 +8,7 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import CharityList from './pages/CharityList';
 import Map from './pages/Map';
 import EventDescription from './pages/EventDescription';
-import EventDescriptionList from './pages/EventDescriptionList';
+import EventsList from './pages/EventsList';
 import CharityDescription from './pages/CharityDescription';
 import NavBar from './components/NavBar';
 import Contacts from './pages/Contacts';
@@ -29,11 +29,11 @@ function App() {
                   <CharityList />
                 </Route>
 
-                <Route path="/association/:id/evenement/">
-                  <EventDescriptionList />
+                <Route path="/association/:id/evenements">
+                  <EventsList />
                 </Route>
 
-                <Route path="/association/:id/evenement/:id_event">
+                <Route path="/association/:id/evenement/:id_event/description">
                   <EventDescription />
                 </Route>
 

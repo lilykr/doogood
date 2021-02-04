@@ -36,7 +36,7 @@ function CharityContentDescription({ charity, id }) {
                     <CharityContacts image={charity.logo} alt={charity.logo} contact={charity.category_name} />
                 </Box>
                 <CharityDescriptionText text={charity.description} />
-                <Link to={`/association/${id}/evenement`}>
+                <Link to={`/association/${id}/evenements`}>
                 <GreenButton text={"Évènements"} />
                 </Link>
             </Box>
