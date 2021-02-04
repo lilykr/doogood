@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    x="0px"
+    y="0px"
+    viewBox="0 0 100 125"
+    style="enable-background:new 0 0 100 100;"
+    xml:space="preserve"
+    fill="#EB5E55">
+    <path d="M50,17.95c-17.672,0-32.05,14.377-32.05,32.05S32.328,82.05,50,82.05S82.05,67.672,82.05,50S67.672,17.95,50,17.95z   M50,80.05C50,80.05,50,80.05,50,80.05c-0.051,0-0.101-0.004-0.152-0.004C49.899,80.046,49.949,80.049,50,80.05L50,80.05z   M50,50.028L28.748,28.776C34.19,23.326,41.708,19.95,50,19.95c0,0,0,0,0,0V50.028z"/>
+    <text x="0"
+        y="115"
+        fill="#000000"
+        font-size="5px"
+        font-weight="bold"
+        font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text>
+    <text x="0"
+        y="120"
+        fill="#000000"
+        font-size="5px"
+        font-weight="bold"
+        font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text>
+</svg>

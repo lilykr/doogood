@@ -1,9 +1,9 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Phone from '../static/phone.svg';
 import Letter from '../static/letter.svg'
-import Map from '../static/map.svg';
 import React from 'react';
-import CharityContacts from './CharityContacts'
+import CharityContacts from './CharityContacts';
+import CharityDescriptionText from './CharityDescriptionText';
 
 
 function CharityHeaderDescription({ charity }) {
@@ -18,8 +18,9 @@ function CharityHeaderDescription({ charity }) {
                 <Box>
                  <CharityContacts image={Phone} alt={"phone"} contact={'0' + charity.telephone} />
                  <CharityContacts image={Letter} alt={"email"} contact={charity.email}/>
-                 
+                 <CharityContacts image={charity.logo} alt={charity.logo} contact={charity.category_name} />
                 </Box>  
+                <CharityDescriptionText text={charity.description} />
 
             </Box>
         </Flex>
