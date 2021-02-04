@@ -7,11 +7,18 @@
   pointer-events: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap');
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+img {
+  display:inline !important;
+} 
 
 .App-header {
   background-color: #282c34;

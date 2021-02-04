@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xml:space="preserve"
+  style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
+  viewBox="0 0 100 125"
+  x="0px"
+  y="0px"
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  fill="#288F81">
+  <defs>
+    <style type="text/css">
+    </style>
+  </defs>
+  <g>
+    <path class="fil0" d="M39.7409 57.6205c-6.98273,-12.0946 -10.0891,-18.9096 -0.915362,-22.8415 8.11187,-3.47719 10.4398,-7.63825 5.93509,-19.2415 -4.16224,-10.7198 -6.15714,-13.5119 -15.1147,-7.61463 -19.0561,12.5469 -17.8442,30.2778 -2.5453,56.776 15.2989,26.4982 30.2376,36.742 50.6307,26.5124 9.58708,-4.80831 8.16621,-7.93353 0.962606,-16.897 -7.79534,-9.70283 -12.5623,-9.76779 -19.6301,-4.48114 -7.9914,5.97879 -12.3414,-0.119292 -19.323,-12.2127z"/>
+  </g>
+  <text x="0"
+    y="115"
+    fill="#000000"
+    font-size="5px"
+    font-weight="bold"
+    font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text>
+  <text x="0"
+    y="120"
+    fill="#000000"
+    font-size="5px"
+    font-weight="bold"
+    font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text>
+</svg>
