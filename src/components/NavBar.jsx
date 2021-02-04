@@ -33,7 +33,7 @@ function NavBar() {
         setLetterIsActive(!isLetterActive)
         setPhoneIsActive(false)
         setMapIsActive(false)
-    // }
+    }
 
     return (
         <Flex paddingTop="5%" marginBottom="3%" borderTop="1px"
