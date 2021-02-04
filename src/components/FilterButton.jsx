@@ -4,6 +4,7 @@ import '../css/FilterButtons.css';
 
 
 function FilterButton({ text, filterCharities, isActive }) {
+    
     return (
 
         <Box as="button" background="#64E3D1" borderRadius="30px" 
