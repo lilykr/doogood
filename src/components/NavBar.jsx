@@ -12,18 +12,21 @@ import ImgNavBar from './ImgNavBar'
 
 function NavBar() {
 
-    let {pathname} = useLocation()
-    console.log(pathname)
+    let { pathname } = useLocation()
 
     const [isMapActive, setMapIsActive] = useState(false)
     const [isPhoneActive, setPhoneIsActive] = useState(false)
     const [isLetterActive, setLetterIsActive] = useState(false)
 
-    const onClickMap = () => {
-        setMapIsActive(!isMapActive)
-        setPhoneIsActive(false)
-        setLetterIsActive(false)
+
+    const onClickMap = (url) => {
+        console.log(url, pathname)
+        if (url.includes(pathname)) {
+            setMapIsActive(true)
+        }
+        else setMapIsActive(false)
     }
+
     const onClickPhone = () => {
         setPhoneIsActive(!isPhoneActive)
         setMapIsActive(false)
@@ -37,32 +40,35 @@ function NavBar() {
 
     return (
         <Flex paddingTop="5%" marginBottom="3%" borderTop="1px"
-         borderColor="#C4C4C4" justifyContent="center" backgroundColor="white" position="fixed">
+            borderColor="#C4C4C4" justifyContent="center" backgroundColor="white" position="fixed">
             <Link to="/">
                 <ImgNavBar
-                 isActive={isMapActive} 
-                onClick={onClickMap} 
-                Image={Map}
-                ImageActive={MapActive}
-                alt={"map"}
+                    isActive={isMapActive}
+                    onClick={onClickMap}
+                    Image={Map}
+                    ImageActive={MapActive}
+                    alt={"map"}
+                    url={"/"}
                 />
             </Link>
             <Link to="/associations">
-            <ImgNavBar 
-            isActive={isPhoneActive} 
-                onClick={onClickPhone} 
-                Image={Phone}
-                ImageActive={PhoneActive}
-                alt={"phone"}
+                <ImgNavBar
+                    isActive={isPhoneActive}
+                    onClick={onClickPhone}
+                    Image={Phone}
+                    ImageActive={PhoneActive}
+                    alt={"phone"}
+                    url={"/associations"}
                 />
             </Link>
             <Link to="/contacts">
-            <ImgNavBar 
-            isActive={isLetterActive} 
-                onClick={onClickLetter} 
-                Image={Letter}
-                ImageActive={LetterActive}
-                alt={"letter"}
+                <ImgNavBar
+                    isActive={isLetterActive}
+                    onClick={onClickLetter}
+                    Image={Letter}
+                    ImageActive={LetterActive}
+                    alt={"letter"}
+                    url={"/contacts"}
                 />
             </Link>
 
