@@ -1,12 +1,11 @@
 import React from 'react';
 
-function ImgNavBar({isActive, onClick, Image, ImageActive, alt, url}) {
-
+function ImgNavBar({isActive, onClick, Image, ImageActive, alt}) {
     return (
         <div>
-            {isActive ?
-                <img onClick={() => onClick(url)} width="30%" src={ImageActive} alt={alt} />
-                : <img onClick={() => onClick(url)} width="30%" src={Image} alt={alt} />
+            {isActive === alt ?
+                <img onClick={() => onClick(alt)} width="30%" src={ImageActive} alt={alt} />
+                : <img onClick={() => onClick(alt)} width="30%" src={Image} alt={alt} />
             }
         </div>
     )

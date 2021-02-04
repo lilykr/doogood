@@ -12,39 +12,20 @@ import ImgNavBar from './ImgNavBar'
 
 function NavBar() {
 
-    let { pathname } = useLocation()
+    const [isActive, setIsActive] = useState("")
 
-    const [isMapActive, setMapIsActive] = useState(false)
-    const [isPhoneActive, setPhoneIsActive] = useState(false)
-    const [isLetterActive, setLetterIsActive] = useState(false)
-
-
-    const onClickMap = (url) => {
-        console.log(url, pathname)
-        if (url.includes(pathname)) {
-            setMapIsActive(true)
-        }
-        else setMapIsActive(false)
+    const onClick = (value) => {
+        setIsActive(value)
     }
 
-    const onClickPhone = () => {
-        setPhoneIsActive(!isPhoneActive)
-        setMapIsActive(false)
-        setLetterIsActive(false)
-    }
-    const onClickLetter = () => {
-        setLetterIsActive(!isLetterActive)
-        setPhoneIsActive(false)
-        setMapIsActive(false)
-    }
 
     return (
         <Flex paddingTop="5%" paddingBottom="5%" marginBottom="4%" borderTop="1px" width= "100%"
             borderColor="#C4C4C4" justifyContent="center" backgroundColor="white" position="fixed">
             <Link to="/">
                 <ImgNavBar
-                    isActive={isMapActive}
-                    onClick={onClickMap}
+                    isActive={isActive}
+                    onClick={onClick}
                     Image={Map}
                     ImageActive={MapActive}
                     alt={"map"}
@@ -53,8 +34,8 @@ function NavBar() {
             </Link>
             <Link to="/associations">
                 <ImgNavBar
-                    isActive={isPhoneActive}
-                    onClick={onClickPhone}
+                    isActive={isActive}
+                    onClick={onClick}
                     Image={Phone}
                     ImageActive={PhoneActive}
                     alt={"phone"}
@@ -63,8 +44,8 @@ function NavBar() {
             </Link>
             <Link to="/contacts">
                 <ImgNavBar
-                    isActive={isLetterActive}
-                    onClick={onClickLetter}
+                    isActive={isActive}
+                    onClick={onClick}
                     Image={Letter}
                     ImageActive={LetterActive}
                     alt={"letter"}
