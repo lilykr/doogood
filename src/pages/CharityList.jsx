@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import FilterButton from '../components/FilterButton';
 import services from '../services';
 import CharityCard from '../components/CharityCard'
 import { Link } from 'react-router-dom';
+import filter from '../static/filter.svg';
 
 
 function CharityList() {
@@ -11,6 +12,8 @@ function CharityList() {
     const [charities, setCharities] = useState([]);
     const [filteredCharities, setFilteredCharities] = useState([]);
     const [isActive, setIsActive] = useState("")
+    const [showFilters, setShowFilters] = useState(false)
+
 
     useEffect(() => {
         services.dataService.getCharities().then((_charities => {
@@ -28,17 +31,32 @@ function CharityList() {
         setIsActive(value)
     }
 
+    const handleFilters = () => {
+        setShowFilters(!showFilters)
+    }
+
+
     return (
         <Box>
-            <Box display="flex" flexWrap="wrap" padding="4%"
-                justifyContent="space-around">
-                <FilterButton text={"Personnes âgées"} filterCharities={filterCharities} isActive={isActive} />
-                <FilterButton text={"Handicap"} filterCharities={filterCharities} isActive={isActive} />
-                <FilterButton text={"Enfants"} filterCharities={filterCharities} isActive={isActive} />
-                <FilterButton text={"Sans abris"} filterCharities={filterCharities} isActive={isActive} />
-                <FilterButton text={"Éducation"} filterCharities={filterCharities} isActive={isActive} />
+            <Box fontFamily='Poppins' fontSize="1em" padding="15% 10% 3% 5%"
+                lineHeight="120%" color="#4BD1BE" textAlign="left">
+                Filtrer
+                <Box as="button">
+                    <img src={filter} width="25%" onClick={handleFilters} />
+                </Box>
             </Box>
-            <Box fontFamily='Poppins-black' fontSize="1.3em" padding="5% 5% 3% 5%"
+            {showFilters ?
+                <Box display="flex" flexWrap="wrap" padding="4%"
+                    justifyContent="space-around">
+                    <FilterButton text={"Personnes âgées"} filterCharities={filterCharities} isActive={isActive} />
+                    <FilterButton text={"Handicap"} filterCharities={filterCharities} isActive={isActive} />
+                    <FilterButton text={"Enfants"} filterCharities={filterCharities} isActive={isActive} />
+                    <FilterButton text={"Sans abris"} filterCharities={filterCharities} isActive={isActive} />
+                    <FilterButton text={"Éducation"} filterCharities={filterCharities} isActive={isActive} />
+                </Box>
+                : null
+            }
+            <Box fontFamily='Poppins-black' fontSize="1.3em" padding="2% 5% 3% 5%"
                 lineHeight="120%" color="#4BD1BE" textAlign="left">
                 Découvrez toutes les associations
             </Box>
