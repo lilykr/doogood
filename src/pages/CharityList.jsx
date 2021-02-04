@@ -38,7 +38,10 @@ function CharityList() {
                 <FilterButton text={"Sans abris"} filterCharities={filterCharities} isActive={isActive} />
                 <FilterButton text={"Éducation"} filterCharities={filterCharities} isActive={isActive} />
             </Box>
-
+            <Box fontFamily='Poppins-black' fontSize="1.3em" padding="5% 5% 3% 5%"
+                lineHeight="120%" color="#4BD1BE" textAlign="left">
+                Découvrez toutes les associations
+            </Box>
             {filteredCharities.length === 0
                 ? "Aucune association ne correspond à votre recherche"
                 :
