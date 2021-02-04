@@ -11,7 +11,7 @@ import EventDescription from './pages/EventDescription';
 import EventsList from './pages/EventsList';
 import CharityDescription from './pages/CharityDescription';
 import NavBar from './components/NavBar';
-import Contacts from './pages/Contacts';
+import Profile from './pages/Profile';
 import "focus-visible/dist/focus-visible";
 
 function App() {
@@ -41,8 +41,8 @@ function App() {
                   <CharityDescription />
                 </Route>
 
-                <Route path="/contacts">
-                  <Contacts />
+                <Route path="/profile">
+                  <Profile />
                 </Route>
               </Box>
 
