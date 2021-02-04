@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Image } from "@chakra-ui/react"
+import { Box, Image, Flex } from "@chakra-ui/react"
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import CharityHeaderDescription from '../components/CharityHeaderDescription'
+import CharityContentDescription from '../components/CharityContentDescription';
+
 
 
 function CharityDescription() {
@@ -22,10 +23,12 @@ function CharityDescription() {
             {charityDescription.filter((value, index, self) => index === self.findIndex((t) =>
                 t.charity_id === value.charity_id)).map((charity, i) =>
                     <div key={i} >
-                        <Image src={charity.image} />
-                        <Box>
-                            <CharityHeaderDescription charity={charity} />
-                        </Box>
+                        <Image zIndex="-1" position="absolute" width="80%"
+                        marginLeft="-50%" width="100%" height="30%" objectFit="cover" objectPosition="top"
+                        src={charity.image} />
+                        <Flex justify="center">
+                            <CharityContentDescription charity={charity} id={id} />
+                        </Flex>
                     </div>
                 )}
         </Box>

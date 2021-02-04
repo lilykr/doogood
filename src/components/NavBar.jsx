@@ -39,7 +39,7 @@ function NavBar() {
     }
 
     return (
-        <Flex paddingTop="5%" marginBottom="3%" borderTop="1px"
+        <Flex paddingTop="5%" paddingBottom="5%" marginBottom="4%" borderTop="1px" width= "100%"
             borderColor="#C4C4C4" justifyContent="center" backgroundColor="white" position="fixed">
             <Link to="/">
                 <ImgNavBar

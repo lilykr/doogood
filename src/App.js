@@ -7,11 +7,12 @@ import {
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import CharityList from './pages/CharityList';
 import Map from './pages/Map';
-import EventDescription from './pages/EventDescription'
+import EventDescription from './pages/EventDescription';
+import EventDescriptionList from './pages/EventDescriptionList';
 import CharityDescription from './pages/CharityDescription';
 import NavBar from './components/NavBar';
 import Contacts from './pages/Contacts';
-import "focus-visible/dist/focus-visible"
+import "focus-visible/dist/focus-visible";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Router>
           <div className="App">
             <Switch>
-              <Box height="87vh">
+              <Box height="91vh">
                 <Route exact path="/">
                   <Map />
                 </Route>
@@ -28,7 +29,11 @@ function App() {
                   <CharityList />
                 </Route>
 
-                <Route path="association/:id/evenement/:id">
+                <Route path="/association/:id/evenement/">
+                  <EventDescriptionList />
+                </Route>
+
+                <Route path="/association/:id/evenement/:id_event">
                   <EventDescription />
                 </Route>
 

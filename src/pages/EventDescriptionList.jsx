@@ -6,7 +6,7 @@ import CharityCard from '../components/CharityCard'
 import { Link } from 'react-router-dom';
 
 
-function CharityList() {
+function EventDescriptionList() {
 
     const [charities, setCharities] = useState([]);
     const [filteredCharities, setFilteredCharities] = useState([]);
@@ -56,4 +56,4 @@ function CharityList() {
     )
 }
 
-export default CharityList;
+export default EventDescriptionList;

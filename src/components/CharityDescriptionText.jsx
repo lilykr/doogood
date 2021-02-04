@@ -5,7 +5,7 @@ import React from 'react';
 function CharityDescriptionText({ text }) {
 
     return (
-        <Box fontFamily='Poppins' fontSize='1em' textAlign='left'>
+        <Box marginLeft="3%" marginBottom="10%" fontFamily='Poppins-regular' fontSize='1em' textAlign='left'>
             {text}
         </Box>
     )

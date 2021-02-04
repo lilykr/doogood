@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import children from '../static/children.svg';
 import commerce from '../static/commerce.svg';
 import education from '../static/education.svg';
@@ -12,8 +12,12 @@ import React from 'react';
 function CharityContacts({ image, alt, contact, handleClick }) {
     return (
         <Flex justifyContent="left">
-            <Button>
+            <Box as="button"
+                variant="ghost"
+                width="20%"
+            >
                 <img
+                    width="40%"
                     onClick={alt === "phone" || alt === "email" ? () => handleClick(contact) : null}
                     src={
                         image === "children" ? children :
@@ -23,9 +27,9 @@ function CharityContacts({ image, alt, contact, handleClick }) {
                                         image === "handicaped" ? handicaped :
                                             image === "homeless" ? homeless :
                                                 image === "minorities" ? minorities :
-                                                    image} alt={alt} width="10%" />
-            </Button>
-            <Box>{contact}</Box>
+                                                    image} alt={alt} />
+            </Box>
+            <Box fontFamily='Poppins-regular' fontSize="0.8em">{contact}</Box>
         </Flex>
 
     )
