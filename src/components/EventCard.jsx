@@ -1,12 +1,5 @@
 import { Box, Image, Text } from '@chakra-ui/react';
 import React from 'react';
-import children from '../static/children.svg';
-import commerce from '../static/commerce.svg';
-import education from '../static/education.svg';
-import grandma from '../static/grandma.svg';
-import handicaped from '../static/handicaped.svg';
-import homeless from '../static/homeless.svg';
-import minorities from '../static/minorities.svg';
 
 
 function EventCard({ event }) {
