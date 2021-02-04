@@ -24,7 +24,7 @@ function CharityDescription() {
                     <div key={i} >
                         <Image src={charity.image} />
                         <Box>
-                        <CharityHeaderDescription charity={charity}/>
+                            <CharityHeaderDescription charity={charity} />
                         </Box>
                     </div>
                 )}

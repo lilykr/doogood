@@ -46,7 +46,7 @@ function CharityList() {
                     t.charity_id === value.charity_id)).map((charity, i) => (
                         <div key={i} >
                             <Link to={`/association/${charity.charity_id}/description`}>
-                                <CharityCard charity={charity} />
+                                <CharityCard charity={charity} image={charity.logo} alt={charity.logo} />
                             </Link>
                         </div>
                     ))
