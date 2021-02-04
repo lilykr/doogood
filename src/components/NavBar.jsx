@@ -1,55 +1,43 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Phone from '../static/phone.svg';
-import Letter from '../static/letter.svg'
+import Profile from '../static/profile.svg'
 import Map from '../static/map.svg';
 import PhoneActive from '../static/phone-active.svg';
-import LetterActive from '../static/letter-active.svg'
+import ProfileActive from '../static/profile-active.svg'
 import MapActive from '../static/map-active.svg';
 import { Flex } from "@chakra-ui/react";
 import ImgNavBar from './ImgNavBar'
 
 
 function NavBar() {
-
-    const [isActive, setIsActive] = useState("")
-
-    const onClick = (value) => {
-        setIsActive(value)
-    }
-
+    const location = useLocation()
 
     return (
         <Flex paddingTop="5%" paddingBottom="5%" marginBottom="4%" borderTop="1px" width= "100%"
             borderColor="#C4C4C4" justifyContent="center" backgroundColor="white" position="fixed">
             <Link to="/">
                 <ImgNavBar
-                    isActive={isActive}
-                    onClick={onClick}
+                    isActive={location.pathname === '/'}
                     Image={Map}
                     ImageActive={MapActive}
                     alt={"map"}
-                    url={"/"}
                 />
             </Link>
-            <Link to="/associations">
+            <Link to={`/associations`}>
                 <ImgNavBar
-                    isActive={isActive}
-                    onClick={onClick}
+                    isActive={location.pathname === `/associations`}
                     Image={Phone}
                     ImageActive={PhoneActive}
                     alt={"phone"}
-                    url={"/associations"}
                 />
             </Link>
-            <Link to="/contacts">
+            <Link to="/profile">
                 <ImgNavBar
-                    isActive={isActive}
-                    onClick={onClick}
-                    Image={Letter}
-                    ImageActive={LetterActive}
-                    alt={"letter"}
-                    url={"/contacts"}
+                    isActive={location.pathname === '/profile'}
+                    Image={Profile}
+                    ImageActive={ProfileActive}
+                    alt={"profile"}
                 />
             </Link>
 
