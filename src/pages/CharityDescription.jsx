@@ -14,7 +14,7 @@ function CharityDescription() {
     useEffect(() => {
         axios.get(`http://localhost:5000/associations/${id}`)
             .then(charityDes => {
-                setCharityDescription(charityDes.data[0])
+                setCharityDescription(charityDes.data)
             })
     }, [])
 
