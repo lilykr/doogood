@@ -26,8 +26,7 @@ function EventsList() {
                     lineHeight="120%">Aucun évènement n'a lieu en ce moment
                   </Box>
                 :
-                event.filter((value, index, self) => index === self.findIndex((t) =>
-                    t.charity_id === value.charity_id)).map((event, i) => (
+                event.map((event, i) => (
                         <div key={i} >
                             <Link to={`/association/${id}/evenement/${event.id}`}>
                                 <EventCard event={event} />
