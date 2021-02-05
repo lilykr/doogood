@@ -22,12 +22,18 @@ function CharityList() {
         }))
     }, [])
 
+    
     const filterCharities = (value) => {
         setCharities(charities)
         let filterChar = [];
-        const categories = charities.map(e => e.category_name)
-        filterChar = categories.filter(charity => charity === value)
-        setFilteredCharities(charities.filter(e => e.category_name === filterChar[0]));
+        if (value === "Tous") {
+            setFilteredCharities(charities)
+        }
+        else {
+            const categories = charities.map(e => e.category_name)
+            filterChar = categories.filter(charity => charity === value)
+            setFilteredCharities(charities.filter(e => e.category_name === filterChar[0]));
+        }
         setIsActive(value)
     }
 
