@@ -48,6 +48,7 @@ function CharityList() {
             {showFilters ?
                 <Box display="flex" flexWrap="wrap" padding="4%"
                     justifyContent="space-around">
+                    <FilterButton text={"Tous"} filterCharities={filterCharities} isActive={isActive} />
                     <FilterButton text={"Personnes âgées"} filterCharities={filterCharities} isActive={isActive} />
                     <FilterButton text={"Handicap"} filterCharities={filterCharities} isActive={isActive} />
                     <FilterButton text={"Enfants"} filterCharities={filterCharities} isActive={isActive} />
